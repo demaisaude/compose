@@ -292,7 +292,7 @@ x-shared-env: &shared-api-worker-env
 services:
   # API service
   api:
-    image: langgenius/dify-ee:latest
+    image: ghcr.io/langgenius/dify:v1.1.1
     restart: always
     environment:
       # Use the shared environment variables.
@@ -312,7 +312,7 @@ services:
   # worker service
   # The Celery worker for processing the queue.
   worker:
-    image: langgenius/dify-ee:latest
+    image: ghcr.io/langgenius/dify:v1.1.1
     restart: always
     environment:
       # Use the shared environment variables.
